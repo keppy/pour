@@ -8,7 +8,7 @@ import (
 )
 
 // JSON pours list of props to json
-func JSON(s string, wr io.Writer) error {
+func JSON(s string, wr io.Writer) {
 	enc := json.NewEncoder(wr)
 	p := map[string]string{}
 
@@ -18,5 +18,4 @@ func JSON(s string, wr io.Writer) error {
 	}
 
 	enc.Encode(p)
-	return nil
 }
