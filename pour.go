@@ -10,7 +10,7 @@ import (
 // JSON pours list of props to json
 func JSON(s string, wr io.Writer) error {
 	enc := json.NewEncoder(wr)
-	var p map[string]string
+	p := map[string]string{}
 
 	w := strings.Fields(s)
 	for i := 1; i < len(w); i += 2 {
