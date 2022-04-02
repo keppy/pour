@@ -1,2 +1,3 @@
 # pour
-sexpr reader-writer for golang with struct marshalling
+
+pour from strings of key value pairs to JSON
