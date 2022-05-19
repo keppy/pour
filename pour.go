@@ -1,6 +1,7 @@
 package pour
 
 import (
+	"fmt"
 	"io"
 
 	"encoding/json"
@@ -17,5 +18,6 @@ func JSON(s string, wr io.Writer) {
 		p[strings.Trim(w[i-1], ",;:()")] = strings.Trim(w[i], ",;:()")
 	}
 
+	fmt.Println("JSON: ", p)
 	enc.Encode(p)
 }
